@@ -1,10 +1,9 @@
-
+#include <stdlib.h>
 #include <stdio.h>
 #include "sieve.h"
 
 int main(int argc, char * argv[]){
-  printf("\n%d\n", sieveer(1000000));
-  /*
+
   int iterations = 1;
   int target = 1000000;
   if(argc > 1){
@@ -17,7 +16,7 @@ int main(int argc, char * argv[]){
 
   int ans = 0;
   while(iterations>0){
-      ans=sieve(target);
+      ans=sieveer(target);
       iterations--;
       printf("The n=%d prime is %d\n", target, ans );
       //this is to modify which prime to
@@ -26,6 +25,6 @@ int main(int argc, char * argv[]){
   }
 
 
-  */
+ 
   return 0;
 }

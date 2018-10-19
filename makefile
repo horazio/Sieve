@@ -8,4 +8,4 @@ sieve.o : sieve.c sieve.h
 	gcc -c sieve.c -lm
 
 run:
-	./a.out
+	./a.out ${args}
