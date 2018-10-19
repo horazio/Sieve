@@ -14,29 +14,34 @@ void print(char * nums, int len){
 
 int sieveer(int target){
   //------------make seive-------------
-
-  int len = 1.3 * target * log(target) + 10;
+  int len;
+  if(target > 5000){
+    len = 1.3 * target * log(target) + 10;
+  }else{
+    len = 1.15 * target * log(target); 
+  }
+  
   char * nums = calloc(len, 1);
 
 
   int point = 0;
   int pointy;
   int count = 0;
-  int cap = pow(target, .5);
+  int cap = sqrt(len);
   
-  while(point < len){
+  while(point <= len){
     pointy = point;
     if(nums[point] == 0){
       count++;
       if(count == target){
-	//print(nums, len);
 	return point + 2;
       }
     }
-
-    while(pointy + point < len){
-      pointy += point + 2;
-      nums[pointy] = 1;
+    if(point <= cap){
+      while(pointy + point < len){
+	pointy += point + 2;
+	nums[pointy] = 1;
+      }
     }
     point++;
   }
