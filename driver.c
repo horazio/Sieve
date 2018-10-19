@@ -3,7 +3,7 @@
 #include "sieve.h"
 
 int main(int argc, char * argv[]){
-  printf("\n%d\n", sieveer(10000));
+  printf("\n%d\n", sieveer(1000000));
   /*
   int iterations = 1;
   int target = 1000000;

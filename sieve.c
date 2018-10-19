@@ -23,9 +23,9 @@ int sieveer(int target){
   
   int cap = pow(target, .5);
  
-  while(point <= target){
+  while(point < target){
     pointy = point;
-    while(pointy < len){
+    while(pointy + point < len){
       pointy += point;
       nums[pointy] = 1;
     }
