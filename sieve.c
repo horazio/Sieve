@@ -27,14 +27,11 @@ int sieveer(int target){
   int cap = sqrt(len);
   
   while(point <= len){
-    pointy = point;
-    if(nums[point] == 0){
-      count++;
-      if(count == target){
+    if(nums[point] == 0 && !target--){
 	return point + 2;
-      }
     }
     if(point <= cap){
+      pointy = point;
       while((pointy += point + 2) < len){
 	if(nums[pointy] == 0){
 	  nums[pointy] = 1;
