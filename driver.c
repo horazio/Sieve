@@ -16,7 +16,7 @@ int main(int argc, char * argv[]){
 
   int ans = 0;
   while(iterations>0){
-      ans=sieveer(target);
+      ans=sieve(target);
       iterations--;
       printf("The n=%d prime is %d\n", target, ans );
       //this is to modify which prime to

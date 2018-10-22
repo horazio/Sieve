@@ -1,1 +1,1 @@
-int sieveer(int target);
+int sieve(int target);

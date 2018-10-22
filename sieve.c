@@ -12,12 +12,12 @@ void print(char * nums, int len){
 }
 
 
-int sieveer(int target){
+int sieve(int target){
   int len;
-  target--;
   if(target == 1){
     return 2;
   }
+  target--;
   if(target < 5000){
     len = .65 * target * log(target) + 100;
   }else{
